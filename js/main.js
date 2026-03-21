@@ -1,69 +1,51 @@
-/* ── CURSOR B: Arrow + glowing trail ── */
+/* ── CURSOR: Arrow + trail ── */
 (function(){
-  const SKY='#38bdf8';
-  const INDIGO='#818cf8';
+  const SKY='#38bdf8', IND='#818cf8';
 
-  /* Inject cursor elements */
-  const style=document.createElement('style');
-  style.textContent=`
-    body{cursor:none}
-    #cur-arrow{position:fixed;pointer-events:none;z-index:9999;top:0;left:0;will-change:transform}
-    #cur-arrow svg{display:block;overflow:visible}
-    .trail-pt{position:fixed;pointer-events:none;z-index:9998;border-radius:50%;will-change:transform;transform:translate(-50%,-50%)}
-  `;
-  document.head.appendChild(style);
+  // Inject styles — force cursor:none everywhere
+  const s=document.createElement('style');
+  s.textContent='*{cursor:none!important}#cur-arrow{position:fixed;pointer-events:none;z-index:9999;top:0;left:0;transform:translate(0px,0px)}.trail-pt{position:fixed;pointer-events:none;z-index:9998;border-radius:50%;transform:translate(-50%,-50%)}';
+  document.head.appendChild(s);
 
-  /* Arrow SVG */
+  // Arrow element
   const arrow=document.createElement('div');
   arrow.id='cur-arrow';
-  arrow.innerHTML=`<svg width="18" height="22" viewBox="0 0 18 22" fill="none">
-    <path d="M2 2L2 17L6.5 13L9.5 20L11.5 19L8.5 12L14 12Z" fill="${SKY}" stroke="#0a0f1e" stroke-width="1.2" stroke-linejoin="round"/>
-  </svg>`;
+  arrow.innerHTML=`<svg width="16" height="20" viewBox="0 0 16 20" fill="none" style="display:block;overflow:visible"><path d="M2 2L2 15L5.5 11.5L8 18L9.8 17.3L7.3 10.8L12 10.8Z" fill="${SKY}" stroke="#0a0f1e" stroke-width="1" stroke-linejoin="round"/></svg>`;
   document.body.appendChild(arrow);
 
-  /* Trail dots — 5 dots, fading */
-  const TRAIL_LEN=5;
-  const trails=[];
-  for(let i=0;i<TRAIL_LEN;i++){
+  // Trail dots
+  const N=5;
+  const dots=Array.from({length:N},(_,i)=>{
     const d=document.createElement('div');
     d.className='trail-pt';
-    const size=6-i*0.8;
-    const alpha=0.55-i*0.1;
-    const col=i%2===0?SKY:INDIGO;
-    d.style.cssText=`width:${size}px;height:${size}px;background:${col};opacity:${alpha};box-shadow:0 0 ${size*2}px ${col}`;
+    const sz=5.5-i*0.7;
+    d.style.cssText=`width:${sz}px;height:${sz}px;background:${i%2===0?SKY:IND};opacity:${0.6-i*0.1};box-shadow:0 0 ${sz*2}px ${i%2===0?SKY:IND}`;
     document.body.appendChild(d);
-    trails.push({el:d,x:window.innerWidth/2,y:window.innerHeight/2});
-  }
+    return{el:d,x:-100,y:-100};
+  });
 
-  /* History buffer for smooth trail */
+  let mx=-100,my=-100;
   const hist=[];
-  const HIST=20;
-  let mx=window.innerWidth/2,my=window.innerHeight/2;
 
+  // Arrow snaps INSTANTLY — no lag
   document.addEventListener('mousemove',e=>{
-    mx=e.clientX;my=e.clientY;
+    mx=e.clientX; my=e.clientY;
     arrow.style.transform=`translate(${mx}px,${my}px)`;
     hist.push({x:mx,y:my});
-    if(hist.length>HIST)hist.shift();
+    if(hist.length>30)hist.shift();
   });
 
-  /* Animate trail along history */
-  (function animTrail(){
-    requestAnimationFrame(animTrail);
-    for(let i=0;i<TRAIL_LEN;i++){
-      const idx=Math.max(0,hist.length-1-(i+1)*Math.floor(HIST/TRAIL_LEN));
-      const p=hist[idx]||{x:mx,y:my};
-      trails[i].x+=(p.x-trails[i].x)*0.35;
-      trails[i].y+=(p.y-trails[i].y)*0.35;
-      trails[i].el.style.transform=`translate(${trails[i].x}px,${trails[i].y}px) translate(-50%,-50%)`;
-    }
+  // Trail follows with staggered delay through history
+  (function loop(){
+    requestAnimationFrame(loop);
+    dots.forEach((d,i)=>{
+      const delay=(i+1)*4;
+      const past=hist[Math.max(0,hist.length-1-delay)]||{x:mx,y:my};
+      d.x+=(past.x-d.x)*0.45;
+      d.y+=(past.y-d.y)*0.45;
+      d.el.style.transform=`translate(${d.x}px,${d.y}px) translate(-50%,-50%)`;
+    });
   })();
-
-  /* Scale arrow on hover */
-  document.querySelectorAll('a,button').forEach(el=>{
-    el.addEventListener('mouseenter',()=>{arrow.style.transform=`translate(${mx}px,${my}px) scale(1.3)`;arrow.style.transition='transform .15s'});
-    el.addEventListener('mouseleave',()=>{arrow.style.transform=`translate(${mx}px,${my}px) scale(1)`;arrow.style.transition='transform .15s'});
-  });
 })();
 
 /* ── SCROLL PROGRESS ── */
@@ -131,9 +113,9 @@ window.addEventListener('scroll',()=>{
   decRing.position.set(7,0,-4);decRing.rotation.x=Math.PI/3;scene.add(decRing);
 
   /* Scroll & mouse */
-  let scrollY=0,tScrollY=0,mX=0,mY=0;
+  let scrollY=0,tScrollY=0,mX=0;
   window.addEventListener('scroll',()=>{tScrollY=window.scrollY});
-  document.addEventListener('mousemove',e=>{mX=(e.clientX/window.innerWidth-.5)*2;mY=(e.clientY/window.innerHeight-.5)*2});
+  document.addEventListener('mousemove',e=>{mX=(e.clientX/window.innerWidth-.5)*2});
 
   let t=0;
   (function animate(){
