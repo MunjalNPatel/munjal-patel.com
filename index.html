@@ -19,6 +19,7 @@
   <nav>
     <a class="nav-logo" href="#"><span class="nav-logo-badge">MP</span>Munjal Patel</a>
     <ul class="nav-links">
+      <li><a href="#network">Network</a></li>
       <li><a href="#competencies">Skills</a></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="#skills">Toolkit</a></li>
@@ -51,6 +52,46 @@
     </div>
   </section>
 
+  <div class="section-divider"></div>
+
+  <!-- CAREER NETWORK -->
+  <section id="network">
+    <div class="s-label">Career Map</div>
+    <h2 class="s-title">Program <em>Delivery Network</em></h2>
+    <p class="s-sub">Every program I've delivered — hover any node to explore the details, click to lock focus.</p>
+    <div id="net-scene" style="background:#0a0f1e;border-radius:8px;overflow:hidden;position:relative;border:1px solid rgba(56,189,248,0.12)">
+      <canvas id="net-c" style="display:block;width:100%"></canvas>
+      <div style="position:absolute;top:14px;left:14px;right:14px;display:flex;justify-content:space-between;align-items:flex-start;pointer-events:none;z-index:2">
+        <div>
+          <div style="font-family:'Space Mono',monospace;font-size:10px;color:#38bdf8;letter-spacing:.15em;text-transform:uppercase">// Program Delivery Network</div>
+          <div style="font-family:'Space Mono',monospace;font-size:8px;color:#475569;letter-spacing:.08em;margin-top:3px">Munjal Patel · Kyra Solutions · 2020–Present · Left = Earlier · Right = Recent</div>
+        </div>
+        <div style="display:flex;gap:14px">
+          <div style="text-align:right"><div style="font-family:'Space Mono',monospace;font-size:13px;font-weight:700;color:#38bdf8;line-height:1">8</div><div style="font-family:'Space Mono',monospace;font-size:8px;color:#475569;letter-spacing:.07em;text-transform:uppercase">Programs</div></div>
+          <div style="text-align:right"><div style="font-family:'Space Mono',monospace;font-size:13px;font-weight:700;color:#38bdf8;line-height:1">6</div><div style="font-family:'Space Mono',monospace;font-size:8px;color:#475569;letter-spacing:.07em;text-transform:uppercase">States</div></div>
+          <div style="text-align:right"><div style="font-family:'Space Mono',monospace;font-size:13px;font-weight:700;color:#38bdf8;line-height:1">$50M+</div><div style="font-family:'Space Mono',monospace;font-size:8px;color:#475569;letter-spacing:.07em;text-transform:uppercase">Managed</div></div>
+        </div>
+      </div>
+      <div id="net-tt" style="position:absolute;background:rgba(15,23,42,.97);border:1px solid rgba(56,189,248,.3);border-radius:6px;padding:10px 14px;pointer-events:none;z-index:10;min-width:190px;display:none;font-family:'Space Mono',monospace">
+        <div id="net-tt-role" style="font-size:9px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:3px"></div>
+        <div id="net-tt-name" style="font-size:12px;color:#f1f5f9;font-weight:700;margin-bottom:7px;font-family:'Space Grotesk',sans-serif;line-height:1.3"></div>
+        <div style="display:flex;justify-content:space-between;gap:12px;font-size:9px;color:#94a3b8;margin-top:4px"><span>Solution</span><span id="net-tt-plat" style="text-align:right;max-width:130px;line-height:1.4"></span></div>
+        <div style="display:flex;justify-content:space-between;gap:12px;font-size:9px;color:#94a3b8;margin-top:4px"><span>Impact</span><span id="net-tt-impact" style="text-align:right;max-width:130px;line-height:1.4"></span></div>
+        <div style="display:flex;justify-content:space-between;gap:12px;font-size:9px;color:#94a3b8;margin-top:4px"><span>Period</span><span id="net-tt-period" style="text-align:right;max-width:130px;line-height:1.4"></span></div>
+      </div>
+      <div style="position:absolute;bottom:14px;left:14px;display:flex;gap:12px;pointer-events:none;z-index:2;flex-wrap:wrap">
+        <div style="display:flex;align-items:center;gap:6px;font-family:'Space Mono',monospace;font-size:8px;color:#64748b;text-transform:uppercase;letter-spacing:.06em"><div style="width:9px;height:9px;border-radius:50%;background:#0ea5e9;border:1.5px solid #38bdf8;flex-shrink:0"></div>Program Hub</div>
+        <div style="display:flex;align-items:center;gap:6px;font-family:'Space Mono',monospace;font-size:8px;color:#64748b;text-transform:uppercase;letter-spacing:.06em"><div style="width:9px;height:9px;border-radius:50%;background:#38bdf8;border:1.5px solid #60a5fa;flex-shrink:0"></div>Project Manager</div>
+        <div style="display:flex;align-items:center;gap:6px;font-family:'Space Mono',monospace;font-size:8px;color:#64748b;text-transform:uppercase;letter-spacing:.06em"><div style="width:9px;height:9px;border-radius:50%;background:#818cf8;border:1.5px solid #a5b4fc;flex-shrink:0"></div>Tech Lead / DPM</div>
+        <div style="display:flex;align-items:center;gap:6px;font-family:'Space Mono',monospace;font-size:8px;color:#64748b;text-transform:uppercase;letter-spacing:.06em"><div style="width:9px;height:9px;border-radius:50%;background:#f472b6;border:1.5px solid #f9a8d4;flex-shrink:0"></div>Sr. Business Analyst</div>
+        <div style="display:flex;align-items:center;gap:6px;font-family:'Space Mono',monospace;font-size:8px;color:#64748b;text-transform:uppercase;letter-spacing:.06em"><div style="width:9px;height:9px;border-radius:50%;background:#fb923c;border:1.5px solid #fdba74;flex-shrink:0"></div>Business Analyst</div>
+      </div>
+      <div style="position:absolute;bottom:14px;right:14px;font-family:'Space Mono',monospace;font-size:8px;color:#334155;letter-spacing:.07em;text-align:right;pointer-events:none;z-index:2;line-height:1.7">Hover to explore · Click to lock</div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
   <!-- COMPETENCIES -->
   <section id="competencies">
     <div class="s-label">What I Bring</div>
@@ -74,24 +115,24 @@
     </div>
   </section>
 
+  <div class="section-divider"></div>
+
   <!-- EXPERIENCE -->
   <section id="experience">
     <div class="s-label">Career</div>
     <h2 class="s-title">Experience <em>Timeline</em></h2>
     <p class="s-sub">A track record of delivering measurable outcomes across multi-state government technology programs.</p>
     <div class="timeline">
-
       <div class="exp">
         <div class="exp-head"><h3 class="exp-title">Project Manager</h3><span class="exp-badge">Jul 2024 – Present</span></div>
         <div class="exp-org">Kyra Solutions — Multi-State GovTech Programs</div>
         <ul class="exp-ul">
           <li>Led concurrent Salesforce CRM programs across two state agencies (environmental licensing, cannabis licensing, and commerce/grants), managing 15+ developers through requirements, sprints, UAT, and go-live; improved team velocity 25% over 3 sprints.</li>
-          <li>Delivered grant management platform supporting $50M+ in state funding; maintained full RTM, resolved 95% of critical UAT defects pre-launch, and achieved zero critical post-go-live issues.</li>
+          <li>Delivered cannabis inspection management system for Illinois DCR; maintained full RTM, resolved 95% of critical UAT defects pre-launch, and achieved zero critical post-go-live issues.</li>
           <li>Automated Power BI pipelines for 20+ stakeholders, eliminating 2+ hrs/week of manual entry and surfacing real-time KPIs to executive leadership — driving a 30% productivity boost.</li>
           <li>Coordinated 20+ Salesforce developers, Solutions Architects, and Design/Implementation teams across 2 concurrent state agency programs; maintained risk registers, change control, and stakeholder communication plans.</li>
         </ul>
       </div>
-
       <div class="exp">
         <div class="exp-head"><h3 class="exp-title">Technical Lead / Deputy Project Manager</h3><span class="exp-badge">Jan 2023 – Jun 2024</span></div>
         <div class="exp-org">Kyra Solutions — Midwest State Dept. of Health</div>
@@ -101,7 +142,6 @@
           <li>Designed complex data models and workflow automations (Flows, Process Builder, Apex triggers) for case intake, investigation, and resolution; primary escalation point maintaining sub-24hr resolution SLAs.</li>
         </ul>
       </div>
-
       <div class="exp">
         <div class="exp-head"><h3 class="exp-title">Senior Business Analyst</h3><span class="exp-badge">Jul 2022 – Dec 2022</span></div>
         <div class="exp-org">Kyra Solutions — Multi-State GovTech CRM Programs</div>
@@ -110,7 +150,6 @@
           <li>Conducted in-depth system audits and workflow reconfiguration across agency platforms; partnered with state stakeholders to translate regulatory mandates into scalable Salesforce configurations.</li>
         </ul>
       </div>
-
       <div class="exp">
         <div class="exp-head"><h3 class="exp-title">Business Analyst</h3><span class="exp-badge">Jan 2021 – Jun 2022</span></div>
         <div class="exp-org">Kyra Solutions — Multi-State Licensing &amp; Grant Programs (IN, FL)</div>
@@ -119,7 +158,6 @@
           <li>Led API integration between a Midwest state DOE and federal grant eligibility system, automating disbursement calculations and cutting approval time 70%.</li>
         </ul>
       </div>
-
       <div class="exp">
         <div class="exp-head"><h3 class="exp-title">Product Owner / Project Manager</h3><span class="exp-badge">Sep 2019 – May 2020</span></div>
         <div class="exp-org">NUcast · City of Boston Municipal Project</div>
@@ -128,9 +166,10 @@
           <li>City of Boston: Managed municipal infrastructure project achieving 25% operational efficiency gain, 30% waste cost reduction, and 7% decrease in carbon emissions.</li>
         </ul>
       </div>
-
     </div>
   </section>
+
+  <div class="section-divider"></div>
 
   <!-- SKILLS -->
   <section id="skills">
@@ -140,40 +179,24 @@
     <div class="skills-grid">
       <div class="skill-box">
         <div class="skill-box-title">PM / Product</div>
-        <div class="tags">
-          <span class="tag">Agile / Scrum</span><span class="tag">Sprint Planning</span><span class="tag">Roadmap Dev</span>
-          <span class="tag">Feature Prioritization</span><span class="tag">UAT</span><span class="tag">RTM</span>
-          <span class="tag">Change Management</span><span class="tag">Risk Management</span>
-          <span class="tag">Resource Allocation</span><span class="tag">MS Project</span>
-        </div>
+        <div class="tags"><span class="tag">Agile / Scrum</span><span class="tag">Sprint Planning</span><span class="tag">Roadmap Dev</span><span class="tag">Feature Prioritization</span><span class="tag">UAT</span><span class="tag">RTM</span><span class="tag">Change Management</span><span class="tag">Risk Management</span><span class="tag">Resource Allocation</span><span class="tag">MS Project</span></div>
       </div>
       <div class="skill-box">
         <div class="skill-box-title">Platforms &amp; Tools</div>
-        <div class="tags">
-          <span class="tag">Salesforce CRM</span><span class="tag">Sales Cloud</span><span class="tag">Service Cloud</span>
-          <span class="tag">PSS</span><span class="tag">Azure DevOps</span><span class="tag">JIRA</span>
-          <span class="tag">Power BI</span><span class="tag">Confluence</span>
-          <span class="tag">SharePoint</span><span class="tag">MS Excel</span>
-        </div>
+        <div class="tags"><span class="tag">Salesforce CRM</span><span class="tag">Sales Cloud</span><span class="tag">Service Cloud</span><span class="tag">PSS</span><span class="tag">Azure DevOps</span><span class="tag">JIRA</span><span class="tag">Power BI</span><span class="tag">Confluence</span><span class="tag">SharePoint</span><span class="tag">MS Excel</span></div>
       </div>
       <div class="skill-box">
         <div class="skill-box-title">Technical</div>
-        <div class="tags">
-          <span class="tag">SQL</span><span class="tag">Python</span><span class="tag">REST API</span>
-          <span class="tag">Salesforce Flow</span><span class="tag">Process Builder</span><span class="tag">Apex</span>
-          <span class="tag">Data Modeling</span><span class="tag">Data Visualization</span>
-        </div>
+        <div class="tags"><span class="tag">SQL</span><span class="tag">Python</span><span class="tag">REST API</span><span class="tag">Salesforce Flow</span><span class="tag">Process Builder</span><span class="tag">Apex</span><span class="tag">Data Modeling</span><span class="tag">Data Visualization</span></div>
       </div>
       <div class="skill-box">
         <div class="skill-box-title">Research &amp; Strategy</div>
-        <div class="tags">
-          <span class="tag">UX Research</span><span class="tag">Market Research</span>
-          <span class="tag">Quantitative Analysis</span><span class="tag">Stakeholder Mapping</span>
-          <span class="tag">Process Mapping</span><span class="tag">Business Canvas</span><span class="tag">MCDA</span>
-        </div>
+        <div class="tags"><span class="tag">UX Research</span><span class="tag">Market Research</span><span class="tag">Quantitative Analysis</span><span class="tag">Stakeholder Mapping</span><span class="tag">Process Mapping</span><span class="tag">Business Canvas</span><span class="tag">MCDA</span></div>
       </div>
     </div>
   </section>
+
+  <div class="section-divider"></div>
 
   <!-- CONTACT -->
   <section id="contact">
@@ -181,7 +204,7 @@
     <h2 class="s-title">Open to new <em>opportunities</em></h2>
     <p class="s-sub">Whether you're looking for a seasoned Project Manager, Product Manager, or GovTech delivery lead — I'd love to hear from you.</p>
     <div class="contact-grid">
-      <a class="c-link" href="/cdn-cgi/l/email-protection#2f474a4343406f425a41454e43025f4e5b4a43014c4042"><span class="c-icon">✉</span> <span class="__cf_email__" data-cfemail="81e9e4ededeec1ecf4efebe0edacf1e0f5e4edafe2eeec">[email&#160;protected]</span></a>
+      <a class="c-link" href="mailto:hello@munjal-patel.com"><span class="c-icon">✉</span> hello@munjal-patel.com</a>
       <a class="c-link" href="https://www.linkedin.com/in/munjalpatel03/" target="_blank"><span class="c-icon">in</span> linkedin.com/in/munjalpatel03</a>
       <a class="c-link" href="tel:+16179914938"><span class="c-icon">☎</span> +1 617-991-4938</a>
     </div>
