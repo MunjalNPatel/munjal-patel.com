@@ -22,6 +22,7 @@
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--text);font-family:var(--body);overflow-x:hidden;cursor:none!important;font-weight:300;line-height:1.7}
 
+
 #canvas3d{position:fixed;top:0;left:0;width:100%;height:100%;z-index:2;pointer-events:none}
 #progress{position:fixed;top:0;left:0;height:2px;background:linear-gradient(90deg,var(--sky),var(--indigo),var(--sky2));z-index:200;width:0%;transition:width .1s}
 
@@ -89,7 +90,7 @@ section{padding:7rem 3.5rem;position:relative;background:var(--bg);z-index:3}
 .exp-org{font-family:var(--mono);font-size:.7rem;color:var(--indigo2);letter-spacing:.04em;margin-bottom:1.1rem}
 .exp-ul{list-style:none;display:flex;flex-direction:column;gap:.6rem}
 .exp-ul li{font-size:.88rem;color:var(--muted);line-height:1.8;padding-left:1.4rem;position:relative}
-.exp-ul li::before{content:'›';position:absolute;left:0;color:var(--sky);font-size:.95rem;top:.05rem}
+.exp-ul li::before{content:'\203A';position:absolute;left:0;color:var(--sky);font-size:.95rem;top:.05rem}
 
 #skills{background:var(--bg2)}
 .skills-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:1.25rem}
@@ -97,7 +98,7 @@ section{padding:7rem 3.5rem;position:relative;background:var(--bg);z-index:3}
 .skill-box.vis{opacity:1;transform:none}
 .skill-box:hover{border-color:var(--border2);transform:translateY(-4px);box-shadow:0 8px 28px rgba(56,189,248,.07)}
 .skill-box-title{font-family:var(--mono);font-size:.63rem;letter-spacing:.14em;text-transform:uppercase;color:var(--sky);margin-bottom:1.1rem;padding-bottom:.7rem;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:.5rem}
-.skill-box-title::before{content:'◈';color:var(--indigo)}
+.skill-box-title::before{content:'\25C8';color:var(--indigo)}
 .tags{display:flex;flex-wrap:wrap;gap:.4rem}
 .tag{font-family:var(--mono);font-size:.67rem;color:var(--muted);background:var(--bg2);border:1px solid var(--border);padding:.28rem .6rem;border-radius:3px;transition:border-color .2s,color .2s,background .2s;cursor:default}
 .tag:hover{border-color:var(--sky);color:var(--sky);background:rgba(56,189,248,.05)}
