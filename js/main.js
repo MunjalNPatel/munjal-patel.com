@@ -113,9 +113,9 @@ window.addEventListener('scroll',()=>{
   decRing.position.set(7,0,-4);decRing.rotation.x=Math.PI/3;scene.add(decRing);
 
   /* Scroll & mouse */
-  let scrollY=0,tScrollY=0,mX=0;
+  let scrollY=0,tScrollY=0,mX=0,mY=0;
   window.addEventListener('scroll',()=>{tScrollY=window.scrollY});
-  document.addEventListener('mousemove',e=>{mX=(e.clientX/window.innerWidth-.5)*2});
+  document.addEventListener('mousemove',e=>{mX=(e.clientX/window.innerWidth-.5)*2;mY=(e.clientY/window.innerHeight-.5)*2});
 
   let t=0;
   (function animate(){
