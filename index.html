@@ -4,12 +4,13 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Munjal Patel — Project &amp; Product Manager, GovTech</title>
-  <meta name="description" content="Project &amp; Product Manager with 5+ years leading Salesforce CRM programs for state agencies — licensing, public health, grants and compliance."/>
+  <meta name="description" content="Project &amp; Product Manager with 6+ years owning delivery, product and technical leadership on Salesforce CRM programs for state agencies across 6 states."/>
   <meta property="og:title" content="Munjal Patel — Project &amp; Product Manager, GovTech"/>
   <meta property="og:description" content="Turning complex regulation into software people use. 8 programs across 6 states."/>
   <meta property="og:type" content="website"/>
   <meta property="og:url" content="https://munjal-patel.com/"/>
-  <meta name="theme-color" content="#0B0F17"/>
+  <meta name="theme-color" content="#090C12"/>
+  <meta name="color-scheme" content="dark"/>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%237DD3FC'/%3E%3Ctext x='16' y='21' font-family='system-ui%2Csans-serif' font-size='13' font-weight='700' fill='%230B0F17' text-anchor='middle'%3EMP%3C/text%3E%3C/svg%3E"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
@@ -27,11 +28,14 @@
 </head>
 <body>
 
+<a class="skip-link" href="#main">Skip to content</a>
+
 <header class="site-header">
-  <nav class="nav container">
+  <nav class="nav container" aria-label="Primary">
     <a class="nav-logo" href="#top"><span class="nav-logo-badge">MP</span>Munjal Patel</a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      <span class="nav-toggle-bar" aria-hidden="true"></span>
+      <span class="nav-toggle-bar" aria-hidden="true"></span>
     </button>
     <div class="nav-links" id="nav-links">
       <a href="#programs">Programs</a>
@@ -43,29 +47,34 @@
   </nav>
 </header>
 
-<main>
+<main id="main">
   <!-- HERO -->
   <section class="hero" id="top">
-    <p class="eyebrow">Project &amp; Product Manager · GovTech · NYC</p>
-    <h1 class="hero-title">Turning complex regulation into <span class="accent">software people use.</span></h1>
-    <p class="hero-sub">5+ years leading Salesforce CRM programs for state agencies — licensing, public health, grants and compliance — with teams of 20+.</p>
-    <div class="btn-row">
-      <a class="btn btn-p" href="#contact">Get in touch</a>
-      <a class="btn btn-s" href="#work">See my work</a>
+    <div class="container">
+      <p class="status"><span class="status-dot" aria-hidden="true"></span>Open to PM &amp; Product roles</p>
+      <p class="eyebrow">Project &amp; Product Manager · GovTech · NYC</p>
+      <h1 class="hero-title">Turning complex regulation into <span class="accent">software people use.</span></h1>
+      <p class="hero-sub">6+ years delivering Salesforce CRM programs for state agencies in licensing, public health, grants and compliance. At a lean consultancy I've owned what larger firms split across three roles: delivery management, product ownership and technical leadership.</p>
+      <div class="btn-row">
+        <a class="btn btn-p" href="#contact">Get in touch</a>
+        <a class="btn btn-s" href="#work">See my work <span class="btn-arrow" aria-hidden="true">↓</span></a>
+      </div>
     </div>
   </section>
 
   <!-- STATS -->
-  <section class="container stats" aria-label="Highlights">
-    <div class="stat"><div class="stat-n">90%</div><div class="stat-l">Faster licence processing</div></div>
-    <div class="stat"><div class="stat-n">1M+</div><div class="stat-l">Residents served by platforms I led</div></div>
-    <div class="stat"><div class="stat-n">$50M+</div><div class="stat-l">State funding managed</div></div>
-    <div class="stat"><div class="stat-n">20+</div><div class="stat-l">Team members led</div></div>
+  <section class="container" aria-label="Highlights">
+    <dl class="stats">
+      <div class="stat"><dt class="stat-l">Programs run in parallel</dt><dd class="stat-n">4</dd></div>
+      <div class="stat"><dt class="stat-l">Residents served by platforms I led</dt><dd class="stat-n">1M+</dd></div>
+      <div class="stat"><dt class="stat-l">State funding managed</dt><dd class="stat-n">$50M+</dd></div>
+      <div class="stat"><dt class="stat-l">State programs across 6 states</dt><dd class="stat-n">8</dd></div>
+    </dl>
   </section>
 
   <!-- PROGRAMS -->
-  <section class="band" id="programs">
-    <div class="container section">
+  <section class="section" id="programs">
+    <div class="container">
       <div class="section-head">
         <div>
           <p class="label">Programs delivered</p>
@@ -73,117 +82,112 @@
         </div>
         <p class="section-note">Salesforce CRM platforms for state licensing, public health, grants and regulatory compliance.</p>
       </div>
-      <div class="programs">
-        <div class="program"><div class="program-st">MI</div><div class="program-name">Michigan EGLE</div><div class="program-desc">Environmental licensing &amp; permitting</div></div>
-        <div class="program"><div class="program-st">IL</div><div class="program-name">Illinois DCR</div><div class="program-desc">Cannabis inspection management</div></div>
-        <div class="program"><div class="program-st">OH</div><div class="program-name">Ohio Dept. of Health</div><div class="program-desc">Public health case &amp; licence mgmt</div></div>
-        <div class="program"><div class="program-st">NM</div><div class="program-name">NM Medical Board</div><div class="program-desc">Practitioner licensing</div></div>
-        <div class="program"><div class="program-st">NM</div><div class="program-name">NM Cannabis Control</div><div class="program-desc">Licensing &amp; compliance</div></div>
-        <div class="program"><div class="program-st">NM</div><div class="program-name">NM Regulation &amp; Licensing</div><div class="program-desc">Regulatory licensing &amp; cases</div></div>
-        <div class="program"><div class="program-st">IN</div><div class="program-name">Indiana DOE</div><div class="program-desc">Grant eligibility &amp; disbursement</div></div>
-        <div class="program"><div class="program-st">FL</div><div class="program-name">Florida Prepaid</div><div class="program-desc">Licensing portals</div></div>
-      </div>
+      <ul class="programs">
+        <li class="program"><span class="program-st">MI</span><span class="program-name">Michigan EGLE</span><span class="program-desc">Environmental licensing &amp; permitting</span></li>
+        <li class="program"><span class="program-st">IL</span><span class="program-name">Illinois DCR</span><span class="program-desc">Cannabis inspection management</span></li>
+        <li class="program"><span class="program-st">OH</span><span class="program-name">Ohio Dept. of Health</span><span class="program-desc">Public health case &amp; license mgmt</span></li>
+        <li class="program"><span class="program-st">NM</span><span class="program-name">NM Medical Board</span><span class="program-desc">Practitioner licensing</span></li>
+        <li class="program"><span class="program-st">NM</span><span class="program-name">NM Cannabis Control</span><span class="program-desc">Licensing &amp; compliance</span></li>
+        <li class="program"><span class="program-st">NM</span><span class="program-name">NM Regulation &amp; Licensing</span><span class="program-desc">Regulatory licensing &amp; cases</span></li>
+        <li class="program"><span class="program-st">IN</span><span class="program-name">Indiana DOE</span><span class="program-desc">Grant eligibility &amp; disbursement</span></li>
+        <li class="program"><span class="program-st">FL</span><span class="program-name">Florida Prepaid</span><span class="program-desc">Licensing portals</span></li>
+      </ul>
     </div>
   </section>
 
   <!-- WORK -->
-  <section class="container section" id="work">
-    <p class="label">Case studies</p>
-    <h2 class="s-title">Selected work</h2>
-    <div class="cases">
-      <article class="case case-featured">
-        <div class="case-body">
-          <p class="case-tag">Featured · Public health</p>
-          <h3 class="case-title">A public health platform for 1M+ residents</h3>
-          <p class="case-text">As Tech Lead / Deputy PM I owned the roadmap, architecture and environments for a Salesforce PSS case &amp; licence system, and integrated it with state and federal health databases over REST.</p>
-        </div>
-        <div class="case-metrics">
-          <div><div class="metric-n">60%</div><div class="metric-l">less manual data entry</div></div>
-          <div><div class="metric-n">&lt;24h</div><div class="metric-l">escalation SLA</div></div>
-        </div>
-      </article>
-      <article class="case">
-        <p class="case-tag">Licensing · IN, FL</p>
-        <h3 class="case-title">185+ licensing application types</h3>
-        <p class="case-text">Full RTM, change requests and UAT through production.</p>
-        <p class="case-result"><span class="accent">90%</span> processing time reduction</p>
-      </article>
-      <article class="case">
-        <p class="case-tag">Grants · Midwest DOE</p>
-        <h3 class="case-title">Automated federal grant eligibility</h3>
-        <p class="case-text">API integration that calculates disbursements automatically.</p>
-        <p class="case-result"><span class="accent">70%</span> faster approvals</p>
-      </article>
-      <article class="case">
-        <p class="case-tag">Cannabis regulation · IL</p>
-        <h3 class="case-title">Inspection management, clean launch</h3>
-        <p class="case-text">Led 15+ developers to go-live with a full RTM and disciplined UAT triage.</p>
-        <p class="case-result"><span class="accent">Zero</span> critical post-launch issues</p>
-      </article>
+  <section class="section section-alt" id="work">
+    <div class="container">
+      <p class="label">Case studies</p>
+      <h2 class="s-title">Selected work</h2>
+      <div class="cases">
+        <article class="case case-featured">
+          <div class="case-body">
+            <p class="case-tag">Featured · Public health</p>
+            <h3 class="case-title">A public health platform for 1M+ residents</h3>
+            <p class="case-text">As Tech Lead / Deputy PM I owned the roadmap, architecture and environments for a Salesforce PSS case &amp; license system, and integrated it with state and federal health databases over REST.</p>
+          </div>
+          <div class="case-metrics">
+            <div class="metric"><div class="metric-n">60%</div><div class="metric-l">less manual data entry</div></div>
+            <div class="metric"><div class="metric-n">&lt;24h</div><div class="metric-l">escalation SLA</div></div>
+          </div>
+        </article>
+        <article class="case">
+          <p class="case-tag">Licensing · IN, FL</p>
+          <h3 class="case-title">185+ licensing application types</h3>
+          <p class="case-text">Full RTM, change requests and UAT through production.</p>
+          <p class="case-result"><span class="case-result-n">90%</span><span class="case-result-l">processing time reduction</span></p>
+        </article>
+        <article class="case">
+          <p class="case-tag">Grants · Midwest DOE</p>
+          <h3 class="case-title">Automated federal grant eligibility</h3>
+          <p class="case-text">API integration that calculates disbursements automatically.</p>
+          <p class="case-result"><span class="case-result-n">70%</span><span class="case-result-l">faster approvals</span></p>
+        </article>
+        <article class="case">
+          <p class="case-tag">Cannabis regulation · IL</p>
+          <h3 class="case-title">Inspection management, clean launch</h3>
+          <p class="case-text">Owned delivery for 15+ developers through go-live, with a full RTM and disciplined UAT triage that resolved 95% of critical defects before launch.</p>
+          <p class="case-result"><span class="case-result-n">Zero</span><span class="case-result-l">critical post-launch issues</span></p>
+        </article>
+      </div>
     </div>
   </section>
 
   <!-- EXPERIENCE -->
-  <section class="rule" id="experience">
-    <div class="container section split">
+  <section class="section" id="experience">
+    <div class="container split">
       <div class="split-side">
         <p class="label">Experience</p>
         <h2 class="s-title">Career</h2>
-        <p class="section-note">Analyst to PM in four years at Kyra Solutions.</p>
+        <p class="section-note">Promoted three times in 3.5 years, from Business Analyst to Project Manager at Kyra Solutions.</p>
       </div>
       <ol class="roles">
-        <li class="role">
-          <div class="role-main">
-            <h3 class="role-title">Project Manager</h3>
-            <p class="role-org">Kyra Solutions · Multi-state programs</p>
-            <p class="role-text">Concurrent Salesforce CRM programs for two state agencies with 20+ developers and architects; +25% team velocity; Power BI reporting for 20+ stakeholders.</p>
-          </div>
+        <li class="role role-current">
           <div class="role-date">Jul 2024 — Now</div>
+          <h3 class="role-title">Project Manager</h3>
+          <p class="role-org">Kyra Solutions · Multi-state programs</p>
+          <p class="role-text">Own end-to-end delivery across 4 concurrent state-agency programs, leading 20+ developers, architects and designers from requirements to go-live. Raised team velocity 25% and automated executive Power BI reporting for 20+ stakeholders.</p>
+          <p class="role-text">Serve as Azure DevOps Manager for the enterprise Regulatory department, overseeing all administrators and process configuration. Also own program budgets and staffing plans, interview, hire and mentor team members, and build delivery playbooks and Labs solution accelerators reused across the company.</p>
         </li>
         <li class="role">
-          <div class="role-main">
-            <h3 class="role-title">Technical Lead / Deputy PM</h3>
-            <p class="role-org">Kyra Solutions · State Dept. of Health</p>
-            <p class="role-text">Technical roadmap, architecture and DEV/QA/PROD environments for a public health platform; mentored developers on Apex and Flow.</p>
-          </div>
           <div class="role-date">Jan 2023 — Jun 2024</div>
+          <h3 class="role-title">Technical Lead / Deputy PM</h3>
+          <p class="role-org">Kyra Solutions · State Dept. of Health</p>
+          <p class="role-text">Owned the technical roadmap, architecture decisions and DEV/QA/PROD environments for a public health platform serving 1M+ residents; primary escalation point holding sub-24h SLAs; mentored developers on Apex and Flow.</p>
         </li>
         <li class="role">
-          <div class="role-main">
-            <h3 class="role-title">Senior Business Analyst</h3>
-            <p class="role-org">Kyra Solutions · Multi-state CRM</p>
-            <p class="role-text">Three Salesforce PSS licensing and case-management implementations; 15% platform performance improvement.</p>
-          </div>
           <div class="role-date">Jul 2022 — Dec 2022</div>
+          <h3 class="role-title">Senior Business Analyst</h3>
+          <p class="role-org">Kyra Solutions · Multi-state CRM</p>
+          <p class="role-text">Led requirements for three Salesforce PSS licensing and case-management implementations across Southeast and Midwest agencies; drove a 15% platform performance improvement.</p>
         </li>
         <li class="role">
-          <div class="role-main">
-            <h3 class="role-title">Business Analyst</h3>
-            <p class="role-org">Kyra Solutions · Licensing &amp; grants</p>
-            <p class="role-text">185+ licensing application types and a federal grant-eligibility API integration.</p>
-          </div>
           <div class="role-date">Jan 2021 — Jun 2022</div>
+          <h3 class="role-title">Business Analyst</h3>
+          <p class="role-org">Kyra Solutions · Licensing &amp; grants</p>
+          <p class="role-text">Delivered 185+ licensing application types (90% faster processing) and led a state-to-federal grant-eligibility API integration that cut approval time 70%.</p>
         </li>
         <li class="role">
-          <div class="role-main">
-            <h3 class="role-title">Product Owner / Project Manager</h3>
-            <p class="role-org">NUcast · City of Boston</p>
-            <p class="role-text">Municipal infrastructure project: 25% efficiency gain, 30% lower waste cost, 7% fewer carbon emissions.</p>
-          </div>
           <div class="role-date">Sep 2019 — May 2020</div>
+          <h3 class="role-title">Product Owner / Project Manager</h3>
+          <p class="role-org">NUcast · City of Boston</p>
+          <p class="role-text">Municipal infrastructure project: 25% efficiency gain, 30% lower waste cost, 7% fewer carbon emissions.</p>
         </li>
       </ol>
     </div>
   </section>
 
   <!-- TOOLKIT -->
-  <section class="band" id="toolkit">
-    <div class="container section-sm">
-      <p class="label">Toolkit</p>
+  <section class="section section-alt section-sm" id="toolkit">
+    <div class="container split">
+      <div class="split-side">
+        <p class="label">Toolkit</p>
+      </div>
       <ul class="tags">
         <li>Salesforce Sales / Service / PSS</li>
         <li>Agile / Scrum</li>
-        <li>Azure DevOps</li>
+        <li>Azure DevOps administration &amp; process design</li>
         <li>JIRA &amp; Confluence</li>
         <li>Power BI</li>
         <li>Apex &amp; Flow</li>
@@ -197,13 +201,15 @@
   </section>
 
   <!-- CONTACT -->
-  <section class="rule" id="contact">
-    <div class="contact">
-      <h2 class="contact-title">Have a program that needs a steady hand?</h2>
-      <p class="hero-sub">Open to Project Manager, Product Manager and GovTech delivery-lead roles.</p>
-      <div class="btn-row">
-        <a class="btn btn-p" href="mailto:hello@munjal-patel.com">hello@munjal-patel.com</a>
-        <a class="btn btn-s" href="https://www.linkedin.com/in/munjalpatel03/" target="_blank" rel="noopener">LinkedIn</a>
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="contact">
+        <h2 class="contact-title">Have a program that needs a steady hand?</h2>
+        <p class="contact-sub">Open to Project Manager, Product Manager and GovTech delivery-lead roles.</p>
+        <div class="btn-row">
+          <a class="btn btn-p" href="mailto:hello@munjal-patel.com">hello@munjal-patel.com</a>
+          <a class="btn btn-s" href="https://www.linkedin.com/in/munjalpatel03/" target="_blank" rel="noopener">LinkedIn <span class="btn-arrow" aria-hidden="true">↗</span></a>
+        </div>
       </div>
     </div>
   </section>
